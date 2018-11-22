@@ -1,0 +1,326 @@
+body {
+  font-family: Overpass, sans-serif;
+  line-height: 1.4em;
+  margin: 0;
+  display: block;
+  font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+body {
+    width: 100%;
+}
+
+/* header banner */
+.EMEA_Metrics {
+  background-color: black;
+  color: white;
+}
+
+.emea_container {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.emea_container img {
+  height: 1.25em;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  border-style: none;
+}
+
+.emea_container span {
+  padding: 0.66rem 0;
+  font-size: 1rem;
+}
+
+/* main banner */
+.main_banner {
+  background-image: url("wa-deep-dives.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: #4e4e4e solid;
+  height: 25em;
+}
+
+.main_banner_container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.headline {
+  background-color: black;
+  color: white;
+  width: 50rem;
+  padding: 2rem 3rem;
+  position: relative;
+  top: 10rem;
+}
+
+h1, h4 {
+  font-weight: bold;
+}
+
+h4 {
+  display: block;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2em;
+  margin: 0.25rem 0;
+}
+
+/* navigation section */
+.navigation {
+  background-color: firebrick;
+  color: white;
+  display: block;
+}
+
+.desktop_nav {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75em 0;
+}
+
+.desktop_nav li {
+  display: list-item;
+  list-style-type: none;
+  text-align: justify;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h4 a {
+    text-decoration: none;
+    color: gray;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+/* Case Study section */
+
+.row {
+  flex-wrap: wrap
+  display: inline-flex;
+}
+
+.containerCS {
+  display: inline-flex;
+  position: relative;
+  max-width: 400px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.containerCS .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 50%;
+  padding: 20px; /* Some padding */
+}
+/* media css rules */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    }
+/* CSS ruleset for <1024px tablet landscape */
+}
+
+/* Summary */
+.summary {
+    background: whitesmoke url(https://www.drupal.org/sites/all/themes/bluecheese/images/bg-gray-blueprint.png) center 0;
+    text-align: center;
+}
+
+.summary h1 {
+    padding-top: 1em;
+}
+
+.data h2 {
+    font-weight: bolder;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+.summary_content {
+    display: inline-flex;
+    color: #4e4e4e;
+    margin: auto;
+    max-width: 100%;
+}
+
+.summary_section {
+    padding: 2em;
+    width: 30%;
+    float: left;
+    margin-right: 0;
+    display: inline;
+}
+
+/*Information - Mobile*/
+
+@media only screen and (max-width: 768px) {
+    .summary_section {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+/* Google pie chart Summary */
+.container_pie {
+    justify-content: center;
+    display: block;
+    border: #4e4e4e solid;
+    width: 100%;
+}
+
+.container_pie h1 {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    margin: 0;
+}
+
+td {
+    display: inline-flex;
+    padding: 5px;
+    margin-left: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 16px;
+}
+
+/*Information - Mobile*/
+@media only screen and (max-width: 768px) {
+    td {
+        margin-left: 140px;
+    }
+}
+
+/* Individual Summary */
+.individual {
+    background-color: darkred;
+    text-align: center;
+    color: white;
+}
+
+.individual h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.individual_content {
+    display: inline-flex;
+    color: #4e4e4e;
+    margin: auto;
+    max-width: 100%;
+    padding-bottom: 32px;
+}
+
+.individual_section {
+    padding: 2em;
+    width: 33.33333%;
+    float: left;
+    margin-right: 0;
+    display: inline;
+    border: white solid 0.5px;
+    color: white;
+}
+
+i {
+    padding-bottom: 10px;
+}
+
+/*html page 2 - iframe graphs*/
+.excel {
+    padding: 32px;
+    font-weight: bolder;
+}
+
+h4 {
+  color: lightgray;
+  margin: 20px
+}
+
+
+.graph {
+    border: #cccccc solid 1px;
+    width: 50%;
+    margin: 32px;
+}
+
+.graph h2 {
+    padding: 10px;
+}
+
+/*D3.JS graphs
+#chart_force{
+    width: 800px;
+    height: 800px;
+    background-color: #f7f7f7;
+    margin: 25px auto;
+}
+
+#chart{
+    width: 800px;
+    height: 600px;
+    background-color: #f7f7f7;
+    margin: 25px auto;
+}
+
+#buttons{
+    width: 800px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+button{
+    background-color: #000;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    transition: all .2s linear;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #50B98C;
+}
+*/
