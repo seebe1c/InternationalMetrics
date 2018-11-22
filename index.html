@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>International Metrics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,600|Overpass:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load Charts and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Draw the pie chart for Highest Customer Numbers when Charts is loaded.
+        google.charts.setOnLoadCallback(drawDistanceChart);
+
+        // Draw the pie chart for Finance when Charts is loaded.
+        google.charts.setOnLoadCallback(drawFinanceChart);
+
+        // Draw the pie chart for Service when Charts is loaded.
+        google.charts.setOnLoadCallback(drawServiceChart);
+
+        // Draw the pie chart for Sale Type when Charts is loaded.
+        google.charts.setOnLoadCallback(drawSaleTypeChart);
+
+        // Draw the pie chart for Order Type when Charts is loaded.
+        google.charts.setOnLoadCallback(drawOrderTypeChart);
+
+        // Draw the pie chart for Make & Model when Charts is loaded.
+        google.charts.setOnLoadCallback(drawMakeModelChart);
+
+
+        // Callback that draws the pie chart for Highest Customer Numbers.
+        function drawDistanceChart() {
+
+            // Create the data table for Highest Customer Numbers.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['DiscreteManufacturing-EMEA', 191],
+                ['Corporate-EMEA', 146],
+                ['Utilities-EMEA', 110],
+                ['Construction-EMEA', 86],
+                ['Retail-EMEA', 58],
+                ['PublicSector-EMEA', 55],
+                ['CommercialPropertyManagement-APAC', 50]
+            ]);
+
+            // Set options for Highest Customer Numbers.
+            var options = {title:'Highest Customer Numbers by Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Highest Customer Numbers.
+            var chart = new google.visualization.PieChart(document.getElementById('Distance_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Mid Customer Numbers.
+        function drawFinanceChart() {
+
+            // Create the data table for Mid Customer Numbers.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['CommercialPropertyManagement-EMEA', 42],
+                ['Blank-EMEA', 41],
+                ['Chemicals-EMEA', 39],
+                ['Telecommunications-EMEA', 35],
+                ['Metals&Mining-EMEA', 33],
+                ['Pharmaceutical-EMEA', 31],
+                ['Oil&Gas-EMEA', 23],
+                ['HigherEducation-EMEA', 20],
+                ['Utilities-APAC', 16],
+                ['Corporate-APAC', 11]
+            ]);
+
+            // Set options for Mid Customer Numbers.
+            var options = {title:'Mid Customer Numbers by Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Mid Customer Numbers.
+            var chart = new google.visualization.PieChart(document.getElementById('Finance_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Low Customer Numberd per Industry.
+        function drawServiceChart() {
+
+            // Create the data table for Low Customer Numberd per Industry.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['Healthcare-EMEA', 9],
+                ['Manufacturing-EMEA', 9],
+                ['Metals&Mining-APAC', 9],
+                ['Oil&Gas-APAC', 9],
+                ['Construction-APAC', 8],
+                ['Chemicals-APAC', 7],
+                ['PublicSector-APAC', 6],
+                ['DiscreteManufacturing-APAC', 5],
+                ['Telecommunications-APAC', 5],
+                ['Manufacturing-EMEA', 9],
+                ['Blank-APAC', 5],
+                ['HigherEducation-APAC', 1],
+                ['Retail-APAC', 2],
+                ['Manufacturing-APAC', 1]
+            ]);
+
+            // Set options for Low Customer Numberd per Industry.
+            var options = {title:'Low Customer Numbers per Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Low Customer Numberd per Industry.
+            var chart = new google.visualization.PieChart(document.getElementById('Service_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Top Partners per Industry.
+        function drawSaleTypeChart() {
+
+            // Create the data table for Top Partners per Industry.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['Corporate-EMEA', 137],
+                ['Corporate-APAC', 77],
+                ['Blank-EMEA', 17]
+            ]);
+
+            // Set options for Top Partners per Industry.
+            var options = {title:'Top Partners per Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Top Partners per Industry.
+            var chart = new google.visualization.PieChart(document.getElementById('SaleType_chart_div'));
+            chart.draw(data, options);
+        }
+
+
+        // Callback that draws the pie chart for Mid Partner Numbers by Industry.
+        function drawOrderTypeChart() {
+
+            // Create the data table for Mid Partner Numbers by Industry.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['Blank-APAC', 9],
+                ['Oil&Gas-EMEA', 7],
+                ['Construction-APAC', 5],
+                ['Construction-EMEA', 4],
+                ['CommercialPropertyManagement-EMEA', 2],
+                ['Oil&Gas-APAC', 2],
+                ['Retail-EMEA', 2]
+            ]);
+
+            // Set options for Mid Partner Numbers by Industry.
+            var options = {title:'Mid Partner Numbers by Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Mid Partner Numbers by Industry.
+            var chart = new google.visualization.PieChart(document.getElementById('OrderType_chart_div'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Low Partner Numbers by Industry.
+        function drawMakeModelChart() {
+
+            // Create the data table for Low Partner Numbers by Industry.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Industry and Region');
+            data.addColumn('number', 'Customer Numbers');
+            data.addRows([
+                ['Chemicals-APAC', 1],
+                ['DiscreteManufacturing-EMEA', 1],
+                ['HigherEducation-EMEA', 1],
+                ['Hospitals/HealthCare-EMEA', 1],
+                ['Pharmaceutical-EMEA', 1],
+                ['PublicSector-EMEA', 1],
+                ['Telecommunications-EMEA', 1]
+            ]);
+
+            // Set options for Low Partner Numbers by Industry.
+            var options = {title:'Low Partner Numbers by Industry',
+                width:600,
+                height:300};
+
+            // Instantiate and draw the chart for Low Partner Numbers by Industry.
+            var chart = new google.visualization.PieChart(document.getElementById('MakeModel_chart_div'));
+            chart.draw(data, options);
+        }
+
+    </script>
+</head>
+
+<!-- This is the EMEA Metrics header section -->
+    <div class="EMEA_Metrics">
+        <div class="emea_container">
+            <img src="./resources/AccruentLogo.png" alt="accruent logo" width="170" height="28.58">
+            <span>International Digital & Offline Metrics</span>
+        </div>
+    </div>
+<!-- This is the main banner section -->
+    <div class="main_banner">
+        <div class="main_banner_container">
+            <div class="headline">
+                <h4>DECISION MAKING MEASURING TOOLS</h4>
+                <h1>INTERNATIONAL DIGITAL & OFFLINE PIPELINE METRICS</h1>
+            </div>
+        </div>
+    </div>
+<!-- This is the navigation bar section -->
+    <div class="navigation">
+        <ul class="desktop_nav">
+            <li><a href="DunsProspects.html">Duns Prospects</a></li>
+            <li><a href="IndustryFocus.html">Industry Focus</a></li>
+            <li><a href="ProductAlignment.html">Product-Industry Alignment</a></li>
+            <li><a href="iframe_data.html">Salesforce Prospects</a></li>
+        </ul>
+    </div>
+<!-- This is the Summary section -->
+    <div class="summary">
+        <h1>International Summary Stats</h1>
+        <div class="summary_content">
+            <div class="summary_section">
+                <div class="summary_distance">
+                    <div class="data">
+                        <i class="fa fa-map-marker fa-5x"></i>
+                        <h2>LinkedIn</h2>
+                        <br>
+                        # new leads
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_finance">
+                    <i class="fa fa-gbp fa-5x"></i>
+                    <div class="data">
+                        <h2>New Customer Sales/ growth</h2>
+                        <h4><a href="https://na38.salesforce.com/00O44000003m8dC">4 New Customers</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_service">
+                    <i class="fa fa-calendar fa-5x"></i>
+                    <div class="data">
+                        <h2>Events</h2>
+                        <h4><a href="https://www.accruent.com/about-us/events/synergy-2019">Synergy 2019 Athens</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_saleType">
+                    <i class="fa fa-bell fa-5x"></i>
+                    <div class="data">
+                        <h2>New Channel/ Growth</h2>
+                        <h4><a href="https://na38.salesforce.com/00O44000003mAa0">1 New Partner</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="summary_section">
+                <div class="summary_orderType">
+                    <i class="fa fa-folder-open fa-5x"></i>
+                    <div class="data">
+                        <h2>Other Pipeline Leads</h2>
+                        <br>
+                        # new leads
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Table and divs that hold the pie charts-->
+    <div class="container_pie">
+        <h1>Partner and Customer Top, Mid and Low Numbers by Industry 2018</h1>
+        <table class="columns">
+            <tr>
+                <td><div id="Distance_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="Finance_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="Service_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="SaleType_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="OrderType_chart_div" style="border: 1px solid #ccc"></div></td>
+                <td><div id="MakeModel_chart_div" style="border: 1px solid #ccc"></div></td>
+            </tr>
+        </table>
+    </div>
+
+<!--Case Study Links-->
+    <div class="container">
+         <div class="row">
+            <br>
+            <h1 class="col-xs-12">International Case Studies</h1>
+            <br>
+            <br>
+            <div class="containerCS">
+              <a href="https://accruent.atlassian.net/wiki/spaces/TSA/pages/736527850/EMEA+Case+Studies+Questions+Mini+Case+Studies?preview=/736527850/809893980/Macutex%20Case%20Study.pdf">
+              <img src="
+     https://www.accruent.com/sites/default/files/styles/quote_image/public/resource-images/case-study-images/men-mobile-device-graphs-500x500.jpg?itok=lX4mcIqx alt="Macutex" style="width:100%" class="col-xs-4"></a>
+            <div class="content">
+                <h1>Macutex</h1>
+                <p>Kykloud</p>
+            </div>
+            </div>
+
+
+            <div class="containerCS">
+              <a href="https://accruent.atlassian.net/wiki/spaces/TSA/pages/736527850/EMEA+Case+Studies+Questions+Mini+Case+Studies?preview=/736527850/908001713/AbbVie_CaseStudy_FINAL.pdf">
+              <img src="
+     https://www.accruent.com/sites/default/files/styles/quote_image/public/quote-images/Abbvie%202.jpg?itok=7HX5ESvh alt="Abbvie" style="width:100%" class="col-xs-4"></a>
+            <div class="content">
+                <h1>Abbvie</h1>
+                <p>Meridian</p>
+              </div>
+            </div>
+
+            <div class="containerCS">
+              <a href="https://accruent.atlassian.net/wiki/spaces/TSA/pages/736527850/EMEA+Case+Studies+Questions+Mini+Case+Studies?preview=/736527850/814187076/Co-op_CaseStudy_FINAL.pdf">
+              <img src="
+     https://www.accruent.com/sites/default/files/styles/quote_image/public/resource-images/case-study-images/co-op-grocery-woman-shopping-500x500.jpg?itok=i2-7hpRI alt="Co-op" style="width:100%" class="col-xs-4"></a>
+              <div class="content">
+                <h1>Co-op</h1>
+                <p>Verisae</p>
+              </div>
+            </div>
+
+          </div>
+     </div>
+
+<!--Individual customer summary-->
+    <div class="individual">
+        <h1>Top 100 customer profile sorted by gross margin:</h1>
+        <div class="individual_content">
+            <div class="individual_section">
+                <div class="individual_GM">
+                    <div class="data">
+                        <i class="fa fa-university fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Gross Margin%</h2>
+                            <br>
+                            Top 10% of customers bring in 70% Gross Margin
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individual_section">
+                <div class="individual_churn">
+                    <div class="data">
+                        <i class="fa fa-cogs fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Churn%</h2>
+                            <br>
+                            Top customer churn rate is 30%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="individual_section">
+                <div class="individual_salecombine">
+                    <div class="data">
+                        <i class="fa fa-cart-plus fa-3x"></i>
+                        <div class="data_block">
+                            <h2>Combined Sale type</h2>
+                            <br>
+                            Top customers buy new cars with a service plan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- This is the distance map section
+
+        <div id="chart"></div>
+        <div id="buttons">
+             <button type="button" class="panning up"><i class="fa fa-arrow-up"></i></button>
+             <button type="button" class="panning down"><i class="fa fa-arrow-down"></i></button>
+             <button type="button" class="panning left"><i class="fa fa-arrow-left"></i></button>
+             <button type="button" class="panning right"><i class="fa fa-arrow-right"></i></button>
+             <button type="button" class="zooming in"><i class="fa fa-plus"></i></button>
+             <button type="button" class="zooming out"><i class="fa fa-minus"></i></button>
+        </div>
+
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="app.js"></script>-->
+
+
+</body>
+</html>
+# InternationalMetrics
